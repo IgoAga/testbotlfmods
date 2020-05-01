@@ -72,7 +72,7 @@ async def unban( ctx, *, member ):
 async def sendme( ctx, message ):
 	await ctx.channel.purge( limit = 1 )
 	await ctx.author.send( message )
-"""
+
 # Connect Voice
 @client.command()
 async def join( ctx ):
@@ -95,7 +95,7 @@ async def leave( ctx ):
 	else:
 		voice = await channel.connect()
 		await ctx.send( f'Bot disconnected to channel: {channel}')
-
+"""
 @client.command()
 async def play( ctx, url : str ):
 	song_there = os.path.isfile('song.mp3')
