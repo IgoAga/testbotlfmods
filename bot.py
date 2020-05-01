@@ -35,6 +35,7 @@ async def help( ctx ):
 	emb = discord.Embed( title = 'Commands:' )
 	emb.add_field( name = '{}hello'.format( prefix ), value = 'Приветствие' )
 	emb.add_field( name = '{}clear'.format( prefix ), value = 'Очистить чат' )
+	emb.add_field( name = '{}sendme'.format( prefix ), value = 'Отправить мое сообщение в личные' )
 	await ctx.send( embed = emb )
 """
 # Kick
