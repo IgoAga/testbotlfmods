@@ -130,3 +130,4 @@ async def play( ctx, url : str ):
 """
 # Connect
 token = os.environ.get('Bot_Token')
+client.run(str(token))
