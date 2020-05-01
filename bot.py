@@ -12,14 +12,14 @@ client.remove_command( 'help' )
 
 @client.event
 async def on_ready():
-	print( 'Bot connected: ' + client.user.name + '\n---------------' )
+	#print( 'Bot connected: ' + client.user.name + '\n---------------' )
 	await client.change_presence( status = discord.Status.online, activity = discord.Game( '.help' ))
 
 # Clear
 @client.command( pass_context = True )
 async def clear( ctx, amount = 0 ):
 	await ctx.channel.purge( limit = 1 + amount )
-	print( '[log]', datetime.datetime.now(), '| clear chat:', amount, '|', ctx.message.author)
+	#print( '[log]', datetime.datetime.now(), '| clear chat:', amount, '|', ctx.message.author)
 
 # Hello
 @client.command( pass_context = True )
