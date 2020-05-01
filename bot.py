@@ -72,7 +72,7 @@ async def unban( ctx, *, member ):
 async def sendme( ctx, message ):
 	await ctx.channel.purge( limit = 1 )
 	await ctx.author.send( message )
-"""
+
 # Connect Voice
 @client.command()
 async def join( ctx ):
@@ -128,7 +128,7 @@ async def play( ctx, url : str ):
 	voice.source.volume = 0.07
 	song_name = name.rsplit('-', 2)
 	await ctx.send( f'Now playing: {song_name[0]}') 
-"""
+
 # Connect
 token = os.environ.get('Bot_Token')
 client.run(str(token))
