@@ -2,5 +2,3 @@ discord.py
 aiohttp
 websockets
 chardet
--U discord.py[voice]
-youtube-dl
