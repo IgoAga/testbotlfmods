@@ -65,13 +65,13 @@ async def unban( ctx, *, member ):
 		await ctx.guild.unban( user )
 		await ctx.send( f'unbanned user { user.mention }')
 		return
-
+"""
 # LS
 @client.command()
 async def sendme( ctx, message ):
 	await ctx.channel.purge( limit = 1 )
 	await ctx.author.send( message )
-
+"""
 # Connect Voice
 @client.command()
 async def join( ctx ):
