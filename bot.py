@@ -32,10 +32,13 @@ async def hello( ctx, amount = 1 ):
 @client.command( pass_context = True )
 async def help( ctx ):
 	await ctx.channel.purge( limit = 1 )
-	emb = discord.Embed( title = 'Commands:' )
+	emb = discord.Embed( title = 'Bot commands:', color = discord.Color.green() )
 	emb.add_field( name = '{}hello'.format( prefix ), value = 'Приветствие' )
 	emb.add_field( name = '{}clear'.format( prefix ), value = 'Очистить чат' )
-	emb.add_field( name = '{}sendme'.format( prefix ), value = 'Отправить мое сообщение в личные' )
+        emb.add_field( name = '{}kick'.format( prefix ), value = 'Кикнуть пользователя' )
+        emb.add_field( name = '{}ban'.format( prefix ), value = 'Забанить пользователя' )
+	emb.add_field( name = '{}unban'.format( prefix ), value = 'Разбанить пользователя' )
+        emb.add_field( name = '{}sendme'.format( prefix ), value = 'Отправить мое сообщение в личные' )
 	await ctx.send( embed = emb )
 """
 # Kick
