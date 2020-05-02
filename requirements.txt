@@ -2,7 +2,3 @@ discord.py
 aiohttp
 websockets
 chardet
-asyncio
-youtube-dl
-PyNaCl
-requests
