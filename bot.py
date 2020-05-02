@@ -20,6 +20,9 @@ async def on_ready():
 async def clear( ctx, amount = 0 ):
 	await ctx.channel.purge( limit = 1 + amount )
 	#print( '[log]', datetime.datetime.now(), '| clear chat:', amount, '|', ctx.message.author)
+	emb = discord.Embed(color = discord.Color.orange())
+	emb.set_footer(text = 'Удалил {amount}', icon_url = ctx.author.avatar_url)
+	await ctx.send(embed = emb)
 
 # Hello
 @client.command( pass_context = True )
