@@ -42,7 +42,7 @@ async def help( ctx ):
 	emb.add_field( name = '{}ban'.format( prefix ), value = 'Забанить пользователя' )
 	emb.add_field( name = '{}unban'.format( prefix ), value = 'Разбанить пользователя' )
 	emb.add_field( name = '{}sendme'.format( prefix ), value = 'Отправить мое сообщение в личные' )
-	await ctx.send( embed = emb )
+	await ctx.author.send( embed = emb )
 """
 # Kick
 @client.command( pass_context = True )
