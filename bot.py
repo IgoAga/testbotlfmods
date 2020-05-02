@@ -7,7 +7,7 @@ from discord import opus
 
 
 bot = commands.Bot(command_prefix='.')
-YOUTUBE_API = 'YOUR YOUTUBE API TOKEN HERE'
+YOUTUBE_API = Ybot
 
 
 bot.remove_command('help')
