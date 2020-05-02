@@ -1,6 +1,6 @@
 import discord
 import datetime
-import youtube_dl
+#import youtube_dl
 import os
 #now_date = datetime.datetime.now()
 from discord.ext import commands
