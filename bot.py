@@ -43,7 +43,7 @@ async def help( ctx ):
 	emb.add_field( name = '{}unban'.format( prefix ), value = 'Разбанить пользователя' )
 	emb.add_field( name = '{}sendme'.format( prefix ), value = 'Отправить мое сообщение в личные' )
 	await ctx.author.send( embed = emb )
-"""
+
 # Kick
 @client.command( pass_context = True )
 @commands.has_permissions( administrator = True)
@@ -72,7 +72,7 @@ async def unban( ctx, *, member ):
 		await ctx.guild.unban( user )
 		await ctx.send( f'unbanned user { user.mention }')
 		return
-"""
+
 # LS
 @client.command()
 async def sendme( ctx, message ):
