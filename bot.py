@@ -41,7 +41,6 @@ async def help( ctx ):
 	emb.add_field( name = '{}kick'.format( prefix ), value = 'Кикнуть пользователя' )
 	emb.add_field( name = '{}ban'.format( prefix ), value = 'Забанить пользователя' )
 	emb.add_field( name = '{}unban'.format( prefix ), value = 'Разбанить пользователя' )
-	emb.add_field( name = '{}sendme'.format( prefix ), value = 'Отправить мое сообщение в личные' )
 	await ctx.author.send( embed = emb )
 
 # Kick
@@ -50,7 +49,7 @@ async def help( ctx ):
 async def kick( ctx, member: discord.Member, *, reason = None ):
 	await ctx.channel.purge( limit = 1 )
 	await member.kick( reason = reason )
-	await ctx.send( f'kick user { member.mention }')
+	await ctx.send( f'Kick user { member.mention }')
 
 # Ban
 @client.command( pass_context = True )
@@ -58,7 +57,7 @@ async def kick( ctx, member: discord.Member, *, reason = None ):
 async def ban( ctx, member: discord.Member, *, reason = None ):
 	await ctx.channel.purge( limit = 1 )
 	await member.ban( reason = reason )
-	await ctx.send( f'ban user { member.mention }')
+	await ctx.send( f'Ban user { member.mention }')
 
 # Unban
 @client.command( pass_context = True )
@@ -70,15 +69,15 @@ async def unban( ctx, *, member ):
 		user = ban_entry.user
 		# Name#9999
 		await ctx.guild.unban( user )
-		await ctx.send( f'unbanned user { user.mention }')
+		await ctx.send( f'Unbanned user { user.mention }')
 		return
-
+"""
 # LS
 @client.command()
 async def sendme( ctx, message ):
 	await ctx.channel.purge( limit = 1 )
 	await ctx.author.send( message )
-"""
+
 # Connect Voice
 @client.command()
 async def join( ctx ):
