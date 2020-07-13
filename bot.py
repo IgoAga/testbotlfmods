@@ -24,13 +24,6 @@ async def clear( ctx, amount = 0 ):
 	emb.set_footer(text = ctx.author.name + ' удалил {}'.format(amount), icon_url = ctx.author.avatar_url)
 	await ctx.send(embed = emb)
 
-# Hello
-@client.command( pass_context = True )
-async def hello( ctx, amount = 1 ):
-	await ctx.channel.purge( limit = amount )
-	author = ctx.message.author
-	await ctx.send( f'Hello { author.mention }' )
-
 # Help
 @client.command( pass_context = True )
 async def help( ctx ):
@@ -42,6 +35,13 @@ async def help( ctx ):
 	emb.add_field( name = '{}ban'.format( prefix ), value = 'Забанить пользователя' )
 	emb.add_field( name = '{}unban'.format( prefix ), value = 'Разбанить пользователя' )
 	await ctx.author.send( embed = emb )
+"""
+# Hello
+@client.command( pass_context = True )
+async def hello( ctx, amount = 1 ):
+	await ctx.channel.purge( limit = amount )
+	author = ctx.message.author
+	await ctx.send( f'Hello { author.mention }' )
 
 # Kick
 @client.command( pass_context = True )
@@ -71,7 +71,7 @@ async def unban( ctx, *, member ):
 		await ctx.guild.unban( user )
 		await ctx.send( f'Unbanned user { user.mention }')
 		return
-"""
+
 # LS
 @client.command()
 async def sendme( ctx, message ):
